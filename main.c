@@ -12,7 +12,7 @@ int main() {
     printf("\n");
     printf("Pilihan menu : \n");
     printf("1. Struct Data Desa\n");
-    printf("2. Sorting Data Desa Berdasarkan Jumlah Tanggungan\n");
+    printf("2. Sorting Data Desa (Jumlah Tanggungan)\n");
     int pil;
     printf("Pilih : ");
     scanf("%d", &pil);
