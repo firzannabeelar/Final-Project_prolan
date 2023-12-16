@@ -3,6 +3,7 @@
 #include "sort.c"
 #include "operasiString.c"
 #include "operasiFile.c"
+#include "searching.c"
 
 int main() {
     printf("\n");
@@ -11,33 +12,43 @@ int main() {
     printf("\n");
     printf("Dirancang oleh : \n");
     printf("Firzannabeel Aqila Rafid (22081010285)\nBenaya Titus Natanael (22081010302)\nBayu Setia Aji (22081010294)\n");
-    printf("\n");
 
     int pil;
+    do{
+    printf("\n");
     printf("Pilihan menu : \n");
     printf("1. Struct Data Desa\n");
     printf("2. Sorting Data Desa Berdasarkan Jumlah Tanggungan\n");
     printf("3. Operasi String\n");
     printf("4. Operasi File\n");
+    printf("5. Searching Data Desa\n");
+    printf("0. Keluar\n");
     printf("Pilih : ");
     scanf("%d", &pil);
+    printf("\n");
 
-    if(pil == 1){
+    switch (pil){
+    case 1:
         displayDesa();
-    }
-    else if(pil == 2){
+        break;
+    case 2:
         displaysort();
-    }
-    else if(pil == 3){
+        break;
+    case 3:
         displayString();
-    }
-    else if(pil == 4){
+        break;
+    case 4:
         displayfile();
-    }   
-    else{ 
-        printf("Program Selesai");
+        break;
+    case 5:
+        displayserching();
+        break;
+    case 0:
+        printf("Program Selesai\n");
+        default:
+        printf("Pilihan Tidak Valid\n");
     }
-    
+    }while (pil != 0);
 
     return 0;
 }
