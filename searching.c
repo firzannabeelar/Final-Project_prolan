@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-void display(int targetJumlahTanggungan) {
+void sequentSearch(int targetJumlahTanggungan) {
     int found = 0;
 
     printf("Data Desa dengan jumlah tanggungan %d:\n", targetJumlahTanggungan);
@@ -29,5 +29,5 @@ void displayserching() {
     printf("Masukkan jumlah tanggungan yang ingin dicari: ");
     scanf("%d", &targetJumlahTanggungan);
 
-    display(targetJumlahTanggungan);
+    sequentSearch(targetJumlahTanggungan);
 }
