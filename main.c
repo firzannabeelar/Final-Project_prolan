@@ -12,6 +12,7 @@ int main() {
     printf("\n");
     printf("Dirancang oleh : \n");
     printf("Firzannabeel Aqila Rafid (22081010285)\nBenaya Titus Natanael (22081010302)\nBayu Setia Aji (22081010294)\n");
+    printf("Anisa Amelia Fitri (2399100298)\nReynanda Sigit Purnama (22081010275)\nZenryo Yudi Arnava D.M (22081010303)\n");
 
     int pil;
     do{
@@ -44,9 +45,9 @@ int main() {
         displayserching();
         break;
     case 0:
-        printf("Program Selesai\n");
+        printf("Pilihan = %d\n", pil);
         default:
-        printf("Pilihan Tidak Valid\n");
+        printf("Program Selesai\n");
     }
     }while (pil != 0);
 
