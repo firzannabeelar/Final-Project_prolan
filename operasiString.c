@@ -1,26 +1,27 @@
 #include <stdio.h>
 #include <string.h>
 
-void tampilkanDataLebihDari(int jumlahTanggungan) {
-    printf("Data Desa dengan Jumlah Tanggungan Lebih Dari %d:\n", jumlahTanggungan);
-    printf("%-15s %-15s %-20s %-15s\n", "Nama Kepala", "Alamat", "Jumlah Tanggungan", "Pekerjaan");
-    printf("------------------------------------------------------------\n");
-
-    for (int i = 0; i < sizeof(dataDesa) / sizeof(dataDesa[0]); i++) {
-        if (dataDesa[i].jumlahTanggungan > jumlahTanggungan) {
-            printf("%-15s %-15s %-20d %-15s\n", dataDesa[i].namaKepala, dataDesa[i].alamat, dataDesa[i].jumlahTanggungan, dataDesa[i].pekerjaan);
-        }
+void prosesDelimiter(struct Desa* desa) {
+    char* token = strtok(desa->alamat, " ");
+    while (token != NULL) {
+        printf("Alamat: %s\n", token);
+        token = strtok(NULL, " ");
     }
 }
 
-void displayString() {
-    int jumlahTanggungan;
+int displayString() {
+    for (int i = 0; i < sizeof(dataDesa) / sizeof(dataDesa[0]); ++i) {
+        printf("Data Desa %d:\n", i + 1);
+        printf("Nama Kepala: %s\n", dataDesa[i].namaKepala);
+        printf("Alamat: %s\n", dataDesa[i].alamat);
+        printf("Jumlah Tanggungan: %d\n", dataDesa[i].jumlahTanggungan);
+        
+        printf("Hasil Pemisahan Alamat dengan STRTOK:\n");
+        prosesDelimiter(&dataDesa[i]);
 
-    printf("Masukkan jumlah tanggungan: ");
-    scanf("%d", &jumlahTanggungan);
+        printf("\n");
+    }
 
-    tampilkanDataLebihDari(jumlahTanggungan);
+    return 0;
 }
-
-
 
